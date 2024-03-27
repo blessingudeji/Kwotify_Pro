@@ -1,4 +1,4 @@
-# Kwotify
+# Kwotify_Pro
 
 ## Introduction
 Kwotify is a platform designed to curate and share inspirational quotes. It provides users with a seamless experience in exploring, discovering, and engaging with motivational quotes.
@@ -44,6 +44,6 @@ npm run dev  # or yarn dev
 We welcome contributions from the community.
 
  **Contributors:**
- [Blessing Udeji](https://www.linkedin.com/in/blessing-udeji-0239b8206/)
- [Belyne Marie Nzabona](https://www.linkedin.com/in/nzabona-marie-belyne-48291426a/)
- [Aishat Adeladun Adewoyin](https://www.linkedin.com/in/aishatadewoyin/)
+ - [Blessing Udeji](https://www.linkedin.com/in/blessing-udeji-0239b8206/)
+ - [Belyne Marie Nzabona](https://www.linkedin.com/in/nzabona-marie-belyne-48291426a/)
+ - [Aishat Adeladun Adewoyin](https://www.linkedin.com/in/aishatadewoyin/)
