@@ -24,9 +24,12 @@
           class="text-center text-fuchsia-800 text-2xl font-light font-['Copperplate']"
           id="home"
         >
+        <!-- Logo -->
+
           <a href="home"> "Kwotify"</a>
         </div>
       </div>
+       <!-- Menu Links -->
       <ul
         class="flex flex-row space-x-6 mx-12 items-center text-center text-fuchsia-800 text-base font-light font-['Montserrat']"
       >
@@ -44,6 +47,8 @@
           <a href="index.html"> About</a>
         </li>
       </ul>
+
+      <!-- Authentication Links -->
       <div
         class="flex flex-row-reverse self-center text-center text-base font-light font-['Montserrat']"
       >
@@ -58,12 +63,16 @@
         </div>
       </div>
     </nav>
+
+      <!--Content Section-->
+
     <div
       x-data="quotes"
       x-effect="console.log(quotelist)"
       class="flex flex-col min-h-screen space-y-4 mt-4"
     >
-      <!--Content Section-->
+      <!-- Quote Generator -->
+
       <div
         class="w-90 bg-white mx-10 pt-8 text-base font-normal font-['Montserrat'] flex flex-col justify-center items-center"
       >
@@ -86,7 +95,9 @@
         </div>
       </div>
 
-      <div class="flex lg:flex-row-reverse mx-12 px-8 py-4 justify-center">
+<!-- Quote Display -->
+
+<div class="flex lg:flex-row-reverse mx-12 px-8 py-4 justify-center">
         <div class="w-full lg:w-3/4 space-x-6">
           <div class="grid grid-cols-2">
             <template x-for="quote in quotelist" :key="quote._id">
@@ -139,6 +150,8 @@
               </div>
             </template>
           </div>
+          <!-- Random Quotes Button -->
+
           <div class="flex justify-end px-8">
             <button
               class="px-4 py-3 bg-fuchsia-800 font-light font-['Montserrat'] text-white mt-8"
@@ -152,6 +165,8 @@
             </button>
           </div>
         </div>
+
+<!-- Search Section -->
 
         <div
           class="w-full lg:w-1/4 rounded-lg bg-white px-8 py-16 mb-10 border border-black border-opacity-50 self-center"
@@ -178,13 +193,7 @@
               class="w-full min-w-max h-20 px-10 py-10 bg-white border border-black border-opacity-50"
             />
           </div>
-          <!-- <template x-for="tag in tags" class="flex flex-row mx-2 my-4">
-              <a
-                x-text="tag"
-                @click="console.log($el.innerHTML)"
-                class="inline-flex space-y-3 my-2 rounded-lg mr-2 max-w-lg px-4 py-2 active:bg-fuchsia-700 active:text-white text-fuchsia-700 border border-fuchsia-700"
-              ></a>
-          </template> -->
+          
           <div>
             <div
               class="w-full min-w-max h-16 py-5 px-4 mt-20 text-center bg-fuchsia-800 border-fuchsia-800 rounded-md text-white font-['Montserrat'] font-light"
@@ -196,52 +205,16 @@
           </div>
         </div>
       </div>
-<!--
-      <div class="text-center text-4xl font-['Montserrat']">
-        <h1>Explore <span class="text-fuchsia-800"> Templates </span></h1>
-      </div>
-    
-      <div class="w-10/12 h-px bg-fuchsia-800 rounded-2xl mx-auto"></div
 
-      <div
-        class="flex flex-row space-x-6 justify-center mx-8 py-20 px-6 rounded-2xl"
-      >
-        <div class="w-1/2 lg:w-1/4">
-          <img :src="imgsrc[0]" alt="Img1" class="rounded-t-2xl" />
-          <div
-            class="flex flex-row space-x-3 justify-end py-4 px-3 text-lg cursor-pointer bg-white shadow-lg"
-          >
-            <iconify-icon
-              icon="line-md:heart"
-              class="text-fuchsia-800 place-self-center mr-2"
-            ></iconify-icon>
-            <iconify-icon
-              icon="line-md:download-loop"
-              class="text-fuchsia-800 place-self-center mr-2"
-            ></iconify-icon>
-          </div>
-        </div>
-        <div class="w-1/2 lg:w-1/4">
-          <img :src="imgsrc[1]" alt="Img1" class="rounded-2xl" />
-          <div
-            class="flex flex-row space-x-3 justify-end py-4 px-3 text-lg cursor-pointer bg-white shadow-lg"
-          >
-            <iconify-icon
-              icon="line-md:heart"
-              class="text-fuchsia-800 place-self-center mr-2"
-            ></iconify-icon>
-            <iconify-icon
-              icon="line-md:download-loop"
-              class="text-fuchsia-800 place-self-center mr-2"
-            ></iconify-icon>
-          </div>
-        </div>
-      </div>
-    </div>
-   -->
+<!-- Footer Section -->
+
+
     <footer>
       <div class="flex flex-row justify-center items-center">
         <div class="w-40 h-12 justify-center items-center mt-14">
+          
+          <!-- Footer Links -->
+
           <ul
             class="flex flex-row space-x-6 items-center text-center text-fuchsia-800 font-light font-['Montserrat']"
           >
@@ -262,6 +235,8 @@
         <hr />
 
         <div class="flex w-40 h-12 justify-center items-center mt-28 gap-3">
+          <!-- Social Media Links -->
+
           <ul
             class="flex flex-row space-x-6 mr-16 justify-center items-center text-xl text-center text-fuchsia-800 font-light font-['Montserrat']"
           >
@@ -313,10 +288,7 @@
         let responseJ = await response.json();
         console.log(responseJ);
         return q == "" ? responseJ : responseJ.results;
-        // return responseJ.slice(0, 10).map((r) => {
-        //   return r.content;
-        // });
-        // return await response.text()
+        
       }
 
       async function setActive(q, ql, imgS) {
@@ -333,6 +305,8 @@
         return res;
       }
       document.addEventListener("alpine:init", () => {});
+
     </script>
-  </body>
+        </body>
+
 </html>
