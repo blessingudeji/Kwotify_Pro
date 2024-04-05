@@ -1,246 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"Kwotify"</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="/src/style.css" rel="stylesheet" />
-  </head>
-  <body class="">
-    <!-- Navigation Section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Add Tailwind CSS -->
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+<body>
 
-    <nav
-      class="w-full h-14 py-8 relative bg-white flex mx-auto items-center justify-around"
-    >
-      <div class="w-40 h-12 justify-center items-center">
-        <div
-          class="text-center text-fuchsia-800 text-2xl font-light font-['Copperplate']"
-          id="home"
-        >
-        <!-- Logo -->
-
-          <a href="home"> "Kwotify"</a>
+<!-- Navigation Section -->
+<nav class="w-full h-14 py-4 bg-white flex items-center justify-around">
+    <div class="w-40">
+        <div class="text-fuchsia-800 text-2xl font-light font-['Copperplate']">
+            <a href="/public/index.html">"Kwotify"</a>
         </div>
-      </div>
-       <!-- Menu Links -->
-      <ul
-        class="flex flex-row space-x-6 mx-12 items-center text-center text-fuchsia-800 text-base font-light font-['Montserrat']"
-      >
-        <li class="">
-          <a href="home.html"> Home</a>
-        </li>
-        <li class="">
-          <a href="#quotes"> Quotes</a>
-        </li>
-
-        <li class="">
-          <a href="#topics"> Topics</a>
-        </li>
-        <li class="">
-          <a href="index.html"> About</a>
-        </li>
-      </ul>
-
-      <!-- Authentication Links -->
-      <div
-        class="flex flex-row-reverse self-center text-center text-base font-light font-['Montserrat']"
-      >
-        <div
-          class="px-4 py-3 bg-fuchsia-800 border border-fuchsia-800 text-white"
-        >
-          <a href="signup.html">Register </a>
+    </div>
+    <ul class="flex space-x-6 text-fuchsia-800 text-base font-light font-['Montserrat']">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="#quotes">Quotes</a></li>
+        <li><a href="index.html">About</a></li>
+    </ul>
+    <div class="flex space-x-4 font-['Montserrat']">
+        <div class="px-4 py-2 bg-fuchsia-800 border border-fuchsia-800 text-white">
+            <a href="signup.html">Register</a>
         </div>
-
-        <div class="px-4 py-3 border border-fuchsia-800 text-fuchsia-800 mr-4">
-          <a href="login.html">Log in</a>
+        <div class="px-4 py-2 border border-fuchsia-800 text-fuchsia-800">
+            <a href="login.html">Log in</a>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-      <!--Content Section-->
-
-    <div
-      x-data="quotes"
-      x-effect="console.log(quotelist)"
-      class="flex flex-col min-h-screen space-y-4 mt-4"
-    >
-      <!-- Quote Generator -->
-
-      <div
-        class="w-90 bg-white mx-10 pt-8 text-base font-normal font-['Montserrat'] flex flex-col justify-center items-center"
-      >
-        <div class="text-black text-6xl font-normal font-Montserrat leading-12">
-          <p>
-            ...Your Random <br />Quotes
-            <span
-              class="text-fuchsia-800 text-6xl font-normal font-['Montserrat'] leading-12"
-            >
-              Generator
-            </span>
-          </p>
+<!-- Content Section -->
+<div x-data="quotes" x-effect="console.log(quotelist)" class="flex flex-col min-h-screen mt-4  font-['Montserrat'] id">
+    <div class="w-full bg-white mx-4 lg:mx-10 py-8 text-lg font-normal font-Montserrat flex flex-col justify-center items-center">
+        <div class="text-black text-4xl md:text-6xl font-normal font-Montserrat leading-12 text-center">
+            <p>...Your Random <br>Quotes <br><span class="text-fuchsia-800 font-medium">Generator</span></p>
         </div>
-        <div
-          class="w-60 min-w-max h-16 py-5 px-4 mt-14 text-center bg-fuchsia-800 border-fuchsia-800 text-white font-['Montserrat'] font-light"
-        >
-          <a href="signup.html">
-            <button>Get Started</button>
-          </a>
+        <div class="w-60 md:w-72 min-w-max h-16 py-3 px-4 mt-14 bg-fuchsia-800 border border-fuchsia-800 text-white font-light font-Montserrat">
+            <a href="signup.html">
+                <button class="w-full h-full focus:outline-none">Get Started</button>
+            </a>
         </div>
-      </div>
+    </div>
 
-<!-- Quote Display -->
-
-<div class="flex lg:flex-row-reverse mx-12 px-8 py-4 justify-center">
-        <div class="w-full lg:w-3/4 space-x-6">
-          <div class="grid grid-cols-2">
-            <template x-for="quote in quotelist" :key="quote._id">
-              <div class="group p-1 w-full">
-                <div
-                  :class="quote.active ? 'bg-fuchsia-800  text-white':'text-fuchsia-800 bg-white'  'font-light font-['Montserrat']'"
-                  class="cursor-pointer h-full group-hover:bg-fuchsia-800 p-5 border 'font-light font-['Montserrat'] border-fuchsia-800 rounded group-hover:text-white"
-                  @click="quotelist = setActive(quote,quotelist,imgsrc)"
-                >
-                  <div class="flex flex-row justify-between py-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      class="block w-5 h-5 mb-5"
-                      viewBox="0 0 975.036 975.036"
-                    >
-                      <path
-                        d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
-                      ></path>
-                    </svg>
-                    <div class="flex flex-row space-x-5 px-6 self-center">
-                      <div class="px-3 py-1 rounded-full bg-fuchsia-100 self-center">
-                        <iconify-icon
-                          icon="ic:baseline-save"
-                          class="text-fuchsia-800 font-semibold place-self-center my-auto"
-                        ></iconify-icon>
-                      </div>
-                      <div class="px-3 py-1 rounded-full bg-fuchsia-100 self-center" @click="yankQuote(quote)">
-                        <iconify-icon
-                          icon="ic:baseline-content-copy"
-                          class="text-fuchsia-800 font-semibold place-self-center my-auto"
-                        ></iconify-icon>
-                      </div>
+    <div class="flex flex-col lg:flex-row mx-4 lg:mx-12 px-4 lg:px-8 py-4 justify-center">
+        <div class="w-full lg:w-3/4 lg:pr-6">
+            <!-- Quotes Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+                <!-- Quote Card Template -->
+                <template x-for="quote in quotelist" :key="quote._id">
+                    <div class="group bg-white p-4 border border-fuchsia-800 rounded-lg cursor-pointer transition-all duration-300 ease-in-out transform hover:bg-fuchsia-800 hover:text-white">
+                        <p x-text="quote.content" class="leading-relaxed mb-4"></p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span x-text="quote.author" class="font-semibold"></span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <!-- Add icons for actions -->
+                                <div class="rounded-full bg-fuchsia-100 p-2 cursor-pointer">
+                                    <iconify-icon icon="ic:baseline-save" class="text-fuchsia-800 font-semibold"></iconify-icon>
+                                </div>
+                                <div class="rounded-full bg-fuchsia-100 p-2 cursor-pointer">
+                                    <iconify-icon icon="ic:baseline-content-copy" class="text-fuchsia-800 font-semibold"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-
-                  <p
-                    x-text="quote.content"
-                    class="leading-relaxed mb-6 font-light"
-                  ></p>
-                  <div class="inline-flex items-center">
-                    <span class="flex-grow flex flex-col">
-                      <span
-                        x-text="quote.author"
-                        class="title-font font-semibold"
-                      ></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-          <!-- Random Quotes Button -->
-
-          <div class="flex justify-end px-8">
-            <button
-              class="px-4 py-3 bg-fuchsia-800 font-light font-['Montserrat'] text-white mt-8"
-              @click="quotelist = await getQuotesRandom($data)"
-            >
-              <iconify-icon
-                icon="ant-design:reload-outlined"
-                class="text-white place-self-center mr-2"
-              ></iconify-icon
-              >Random quotes
-            </button>
-          </div>
-        </div>
-
-<!-- Search Section -->
-
-        <div
-          class="w-full lg:w-1/4 rounded-lg bg-white px-8 py-16 mb-10 border border-black border-opacity-50 self-center"
-        >
-          <div class="h-50 self-center text-center">
-            <span
-              class="text-black text-2xl font-bold font-['Montserrat'] leading-9 text-center"
-              >Find Quotes for
-            </span>
-            <span
-              class="self-center text-center text-fuchsia-800 text-2xl font-bold font-['Montserrat'] leading-9"
-              >free</span
-            >
-          </div>
-          <div
-            class="w-full h-6 text-black text-opacity-80 text-xl font-normal font-['Montserrat'] leading-normal mt-2 mb-16"
-          >
-            <input
-              type="text"
-              placeholder="*Input Keyword"
-              required
-              x-model="query"
-              id="query"
-              class="w-full min-w-max h-20 px-10 py-10 bg-white border border-black border-opacity-50"
-            />
-          </div>
-          
-          <div>
-            <div
-              class="w-full min-w-max h-16 py-5 px-4 mt-20 text-center bg-fuchsia-800 border-fuchsia-800 rounded-md text-white font-['Montserrat'] font-light"
-            >
-              <button @click="quotelist = getQuotesSearch($data)">
-                Search
-              </button>
+                </template>
             </div>
-          </div>
+            <!-- Random Quotes Button -->
+            <div class="flex justify-end mt-6">
+                <button class="px-4 py-2 bg-fuchsia-800 text-white font-light font-Montserrat" @click="quotelist = await getQuotesRandom($data)">
+                    <iconify-icon icon="ant-design:reload-outlined" class="mr-2"></iconify-icon>Random quotes
+                </button>
+            </div>
         </div>
-      </div>
+
+        <!-- Search Section -->
+        <div class="w-full lg:w-1/4 lg:pl-6 mt-6 lg:mt-0">
+            <div class="bg-white border border-black border-opacity-50 rounded-lg p-4">
+                <div class="text-black text-2xl font-bold font-Montserrat mb-4 text-center">Find Quotes for free</div>
+                <input type="text" placeholder="Input Keyword" required x-model="query" id="query" class="w-full h-12 px-4 py-2 bg-white border border-black border-opacity-50 mb-6">
+                <div class="text-center">
+                    <button class="w-full bg-fuchsia-800 text-white font-light font-Montserrat py-2" @click="quotelist = getQuotesSearch($data)">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Footer Section -->
-
-
-    <footer>
-      <div class="flex flex-row justify-center items-center">
-        <div class="w-40 h-12 justify-center items-center mt-14">
-          
-          <!-- Footer Links -->
-
-          <ul
-            class="flex flex-row space-x-6 items-center text-center text-fuchsia-800 font-light font-['Montserrat']"
-          >
-            <li><a href="#home"> Home</a></li>
-            <li><a href="#quotes"> Quotes</a></li>
-
-            <div
-              class="text-center text-fuchsia-800 text-xl font-light font-['Copperplate']"
-              id="home"
-            >
-              <a href="home"> "Kwotify"</a>
-            </div>
-
-            <li><a href="#topics"> Topics</a></li>
-            <li><a href="index.html"> About</a></li>
-          </ul>
-        </div>
-        <hr />
-
-        <div class="flex w-40 h-12 justify-center items-center mt-28 gap-3">
-          <!-- Social Media Links -->
-
-          <ul
-            class="flex flex-row space-x-6 mr-16 justify-center items-center text-xl text-center text-fuchsia-800 font-light font-['Montserrat']"
-          >
-            <a href="https://github.com/blessingudeji/Kwotify"><i class="fa-brands fa-github"></i></a>
+<footer class="mt-8 bg-white border-t border-black border-opacity-50  font-['Montserrat']">
+    <div class="container mx-auto py-8 px-4">
+        <div class="flex justify-between items-center text-fuchsia-800">
+            <ul class="flex space-x-6 text-fuchsia-800 font-light">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
+            <div class="flex space-x-6">
+                <a href="https://github.com/blessingudeji/Kwotify"><i class="fa-brands fa-github
+"></i></a>
             <a href="https://twitter.com/blessingudeji_"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/blessing-udeji-0239b8206/"><i class="fa-brands fa-linkedin"></i></a>
 
@@ -305,8 +168,6 @@
         return res;
       }
       document.addEventListener("alpine:init", () => {});
-
     </script>
-        </body>
-
+  </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1
+      class="text-center pt-10 text-fuchsia-800 text-3xl font-light font-['Copperplate']"
+    >
+    <a href="index.html"> "Kwotify" </a>
+  </h1>
+    <p
+      class="m-7 text-center text-black-700 text-2xl font-light font-['Montserrat']"
+    >
+      Welcome Back
+    </p>
+    <form
+      x-data="login"
+      id="loginForm"
+      class="flex flex-col justify-center items-center"
+    >
+      <div class="border-solid border border-black max-w-max bg-white p-16">
+        <h3
+          class="mb-9 text-center text-black-700 text-xl font-bold font-['Montserrat']"
+        >
+          Login
+        </h3>
+
+        <!--Email input-->
+        <div class="flex flex-col mt-2.5">
+          <input
+            type="email"
+            placeholder="Email Address"
+            x-model="email"
+            id="email"
+            autocomplete="email"
+            required
+            class="w-80 h-10 border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black-400 font-light font-['Montserrat'] focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+          />
+          <span x-text="err['email']" class="text-xs text-red-500"></span>
+        </div>
+
+        <!--Password Input-->
+        <div class="flex flex-col mt-5">
+          <input
+            type="password"
+            placeholder="Password"
+            x-model="password"
+            id="password"
+            autocomplete="password"
+            required
+            class="w-full h-10 border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black-400 font-light font-['Montserrat'] focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+          />
+          <span x-text="err['password']" class="text-xs text-red-500"></span>
+          <span x-text="err['loginErr']" class="text-xs text-red-500"></span>
+
+        </div>
+
+        <div
+          class="flex justify-end gap-2 pt-3 items-end font-light font-['Montserrat'] text-xs"
+        >
+          <a
+            class="text-fuchsia-700 font-light font-['Montserrat']"
+            href="login.html"
+            >Forgot Password?</a
+          >
+        </div>
+
+        <div
+          class="flex flex-row justify-center items-center mt-8 text-base font-medium font-['Montserrat']"
+        >
+          <div
+            class="px-9 py-2 bg-fuchsia-800 border border-fuchsia-700 text-white"
+          >
+            <div
+              class="text-center text-white text-base font-light font-['Montserrat']"
+            >
+              <button 
+              :disabled="loading"
+              @click="login($data)"
+              class="btn" type="submit">
+
+              <iconify-icon
+              icon="line-md:loading-twotone-loop"
+              class="text-white"
+              :class="loading ? '' : 'hidden'"
+            ></iconify-icon>
+                
+                <a href="#">Login</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div
+      class="flex justify-center gap-2 pt-3 items-center font-light font-['Montserrat'] text-sm"
+    >
+      <p>New to "Kwotify"?</p>
+      <a
+        class="text-fuchsia-700 font-light font-['Montserrat']"
+        href="signup.html"
+        >Sign Up</a
+      >
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  </body>
+</html>

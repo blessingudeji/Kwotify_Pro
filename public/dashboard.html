@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body>
+   
+
+  
+    <aside class="ml-[-100%] fixed z-10 top-0 pb-3  w-full flex flex-col justify-between h-screen  bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+
+   
+      <div
+        id="view"
+        class="h-full w-screen flex flex-row"
+        x-data="{ sidenav: true }"
+      >
+        <button
+          @click="sidenav = true"
+          class="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden"
+        >
+          <svg
+            class="w-5 h-5 fill-current"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div
+          id="sidebar"
+          class="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
+          x-show="sidenav"
+          @click.away="sidenav = false"
+        >
+          <div class="space-y-6 md:space-y-10 mt-10">
+            <h1
+            class="text-center pt-10 text-fuchsia-800 text-3xl font-light font-['Copperplate']"
+          >
+          <a href="home.html"> "Kwotify" </a>
+        </h1>
+            <div id="profile" class="space-y-3">
+                <img  src="https://i.postimg.cc/MHRyBMv0/47.jpg" class="rounded-full w-10 md:w-16 mx-auto ">
+       
+              <div>
+                <h2
+                  class="font-medium text-xs md:text-sm text-center text-fuchsia-800  font-['Montserrat']"
+                >
+                  Blessing Udeji
+                </h2>
+                <p class="text-xs text-gray-500 text-center">User</p>
+              </div>
+            </div>
+            <div
+              class="flex border-2 border-gray-200 rounded-md focus-within:ring-2 ring-fuchsia-800"
+            >
+              <input
+                type="text"
+                class="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm text-gray-600 focus:outline-none"
+                placeholder="Search"
+              />
+              <button
+                class="rounded-tr-md rounded-br-md px-2 py-3 hidden md:block"
+              >
+                <svg
+                  class="w-4 h-4 fill-current"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div id="menu" class="flex flex-col space-y-2">
+              <a
+                href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2  hover:bg-fuchsia-800 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
+              >
+                <svg
+                  class="w-6 h-6 fill-current inline-block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  ></path>
+                </svg>
+                <span class="">Dashboard</span>
+              </a>
+              <a
+                href="home.html"
+                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-fuchsia-800 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              >
+             
+              <svg  class="w-6 h-6 fill-current inline-block"
+
+               xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+
+                <path fill="currentColor" d="M13.796 4.136a2.5 2.5 0 0 0-3.592 0L5.405 9.092c-.275.284-.46.644-.532 1.034a28.756 28.756 0 0 0-.127 9.624l.176 1.13c.056.357.364.62.725.62H9a.5.5 0 0 0 .5-.5v-7h5v7a.5.5 0 0 0 .5.5h3.353a.733.733 0 0 0 .724-.62l.177-1.13a28.759 28.759 0 0 0-.127-9.624a2.007 2.007 0 0 0-.533-1.034z" />
+              </svg>
+                <span class="">Home</span>
+              </a>
+              
+              <a
+                href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2  fixed  bottom-8 hover:bg-fuchsia-800 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              >
+              <svg class="w-6 h-6 fill-current inline-block"
+
+              xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z" />
+              </svg>
+                <span class="px-2 w-9">Logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      </aside>
+
+
+    
+          <div class="px-6 pt-6 2xl:container">
+              <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+
+              <div class="md:col-span-2 lg:col-span-1" >
+
+
+                <div class="h-14 from-violet-500 to-fuchsia-800 bg-gradient-to-l hover:from-fuchsia-800 hover:to-violet-500">
+                  <p class="m-7 pt-3 text-center text-white text-2xl font-light font-['Montserrat']">
+                      Welcome!
+                  </p>
+              </div>
+          <div class=" pt-10  text-center">
+          <h1 class="text-black-800 text-2xl font-light font-['Montserrat']"> Saved <span class="text-fuchsia-800 text-2xl font-light font-['Montserrat']"> Items</span></h1>
+          </div>
+   </div>
+   </div>
+   </div>
+   </div>
+ 
+
+<footer class=" flex fixed  bottom-8">
+<p class="text-center text-fuchsia-800  text-xl font-light font-['Montserrat']"><a href="home.html"> Back </a></p>
+</footer>
+
+<script type="module" src="./src/index.js"></script>
+
+
+</body>
+</html>
