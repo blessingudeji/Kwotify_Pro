@@ -3,7 +3,7 @@ import Alpine from "alpinejs";
 
 
 //NOTE: For now just bind process to specific port
-const PORT = 3000;
+const PORT = 3001;
 window.Alpine = Alpine;
 Alpine.data("signup", () => ({
   name: "",
