@@ -14,8 +14,6 @@ const quoteRoutes = require("./routes/quoteRoutes.js");
 // Load environment variables from .env file
 dotenv.config();
 
-console.log("JWT_SECRET from .env file:", process.env.JWT_SECRET);
-
 const app = express();
 connectDB();
 
